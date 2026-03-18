@@ -1,0 +1,14 @@
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\bin\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.exe
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\bin\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.deps.json
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\bin\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.runtimeconfig.json
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\bin\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\bin\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.pdb
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.AssemblyInfoInputs.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.AssemblyInfo.cs
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.csproj.CoreCompileInputs.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\refint\Challenge-04-Market-Prize-Analyzer.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.pdb
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\Challenge-04-Market-Prize-Analyzer.genruntimeconfig.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-04-Market-Prize-Analyzer\obj\Debug\net10.0\ref\Challenge-04-Market-Prize-Analyzer.dll

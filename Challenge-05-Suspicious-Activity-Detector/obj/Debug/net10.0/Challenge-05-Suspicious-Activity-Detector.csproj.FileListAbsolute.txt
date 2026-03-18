@@ -1,0 +1,14 @@
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\bin\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.exe
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\bin\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.deps.json
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\bin\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.runtimeconfig.json
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\bin\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\bin\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.pdb
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.AssemblyInfoInputs.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.AssemblyInfo.cs
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.csproj.CoreCompileInputs.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\refint\Challenge-05-Suspicious-Activity-Detector.dll
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.pdb
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\Challenge-05-Suspicious-Activity-Detector.genruntimeconfig.cache
+C:\Users\FUJITSU\Desktop\csharp-foundations\Challenge-05-Suspicious-Activity-Detector\obj\Debug\net10.0\ref\Challenge-05-Suspicious-Activity-Detector.dll
