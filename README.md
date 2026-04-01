@@ -1,6 +1,6 @@
 # C# Foundations Journey 🚀
 
-Hi, I'm Muhammad Sani Bello — a Computer Science student focused on becoming a full-stack developer with strong backend skills using C# and .NET.
+Hi, I'm Muhammad Sani Bello, a Computer Science student focused on becoming a full-stack developer with strong backend skills using C# and .NET.
 
 ---
 
