@@ -1,65 +1,53 @@
-# C# Foundations
+# C# Foundations Journey 🚀
 
-This repository contains C# practice projects to build strong programming fundamentals and prepare for backend development with ASP.NET Core.
-
----
-
-## 📂 Project Structure
-
-Each challenge or mini-project is in its own folder:
-
-- Challenge-01-SIM-Checker
-- Challenge-02-Theft-Analyzer
-- Challenge-03-IMEI-Checker
-- Challenge-04-Market-Prize-Analyzer
-- Challenge-05-Suspicious-Activity-Detector
-- Challenge-06-Student-Performance-Analyzer
-- (More comming...)
+Hi, I'm Muhammad Sani Bello — a Computer Science student focused on becoming a full-stack developer with strong backend skills using C# and .NET.
 
 ---
 
-## Skills Practiced
-- Arrays
-- Loops
-- Statements
-- Variables
-- Basic Logic Building
-- Console Output Formatting
-- Methods
+## 📌 About This Repository
+
+This repository documents my journey learning C# through structured practice and real-world mini projects.
 
 ---
 
-## Microsoft Learn Projects
+## 🧠 Topics Covered
 
-Structured guided and challenge projects completed from Microsoft Learn C# modules (FreeCodeCamp)
-
-Each project is in its own sub-folder inside the Microsoft-Learn-Projects Root folder
-
-- Guided-Project-01-Students-Grades
-- Guided-Project-02-Student-GPA
-- Guided-Project-03-Updated-Students-Grades
-- Guided-Project-04-Pets-Adoption-Manager
-- Guided-Project-05-IP-Address-Validity-Checking
-- (More Comming...)
-
+* Basics (Variables, Data Types, Strings)
+* Conditionals (if/else logic)
+* Loops & Arrays
+* Methods (in progress)
 
 ---
 
-## 🚀 Roadmap
+## 🛠 Projects
 
-Planned topics for future practice:
-
-- Object-Oriented Programming (OOP)
-- Collections & LINQ
-- Exception Handling
-- File Handling
-- ASP.NET Core
-- Database Integration
+* 🎲 Dice Game
+* 🔐 Login Simulator
+* 📊 Student Performance Analyzer
+* 📱 SIM Checker
+* 🚨 Suspicious Activity Detector
 
 ---
 
-## 👨‍💻 About Me
+## 📂 Structure
 
-I am a Computer Science student focused on building strong foundations in backend development.  
-Currently mastering C# fundamentals and preparing to transition into ASP.NET Core and scalable system design.  
-I believe in structured learning, consistent practice, and solving real-world problems through technology.
+* `01-Basics`
+* `02-Conditionals`
+* `03-Loops&Arrays`
+* `05-Methods`
+* `Projects`
+* `Microsoft-Learn-Projects`
+
+---
+
+## 🎯 Goal
+
+To build a strong programming foundation and become a professional full-stack developer using C# and modern technologies.
+
+---
+
+## 📈 Progress
+
+Consistently learning, building, and pushing code to improve every day.
+
+---
