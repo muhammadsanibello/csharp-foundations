@@ -1,0 +1,331 @@
+﻿// ATM Simulator
+Console.WriteLine("\t\t\t\t\t\tFIRST BANK OF NIGERIA (est. 1899)\n");
+
+Console.WriteLine("Welcome  Back User!\n");
+decimal balance = 5000000.00m;
+//string pin = "12345";
+string[] validAccountNumbers = ["7045435653", "8065656661", "7030778463", "8063636110", "8137097889", "7033637425"];
+string? response;
+string? accountNumber;
+bool exit = false;
+
+while (exit == false)
+{
+    Console.WriteLine("1. Transfer\n2. Withdraw\n3. Check Balance\n4. Airtime/Data\n5. Exit\n");
+    response = Console.ReadLine() ?? "";
+
+    if (response.All(char.IsDigit) && !string.IsNullOrEmpty(response))
+    {
+        switch (response)
+        {
+            case "1":
+                Transfer();
+                break;
+            case "2":
+                Withdraw();
+                break;
+            case "3":
+                BalanceCheck();
+                break;
+            case "4":
+                AirtimeData();
+                break;
+            case "5":
+                Exit();
+                break;
+            default:
+                Console.WriteLine("Invalid Option!");
+                break;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input! Try again");
+    }
+    Console.WriteLine();
+}
+
+void Transfer()
+{
+    Console.WriteLine("\nEnter recipient\'s account number");
+    accountNumber = Console.ReadLine() ?? "";
+
+    if (accountNumber.All(char.IsDigit) && !string.IsNullOrEmpty(accountNumber))
+    {
+        if (accountNumber.Length == 10)
+        {
+            if (validAccountNumbers.Contains(accountNumber))
+            {
+                Console.Write("\nEnter Amount: ");
+                response = Console.ReadLine();
+
+                if (decimal.TryParse(response, out decimal amount))
+                {
+                    if (amount <= balance)
+                    {
+                        balance -= amount;
+                        Console.WriteLine($"\nYou have successfully sent N{amount} to {accountNumber}. Your Available balance is N{balance}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Insuffient balance! Your current balance is N{balance}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nInvalid Amount!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nAccount Number Doesn\'t exit");
+            }
+        }
+        else
+        {
+            Console.WriteLine("\nError! Account number must be 10 digits.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("\nInvalid Account Number!");
+    }
+}
+
+void Withdraw()
+{
+    Console.WriteLine("\nEnter Account Number:");
+    accountNumber = Console.ReadLine() ?? "";
+
+    if (!string.IsNullOrEmpty(accountNumber) && accountNumber.All(char.IsDigit))
+    {
+        if (accountNumber.Length == 10)
+        {
+            Console.Write("\nEnter Amount: ");
+            response = Console.ReadLine();
+
+            if (decimal.TryParse(response, out decimal amount))
+            {
+                if (amount <= balance)
+                {
+                    balance -= amount;
+                    Console.WriteLine($"\nYou have successfully withdraw N{amount} to {accountNumber}. You available balance is N{balance}");
+                }
+                else
+                {
+                    Console.WriteLine("\nInsufficient balance!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid Amount!");
+            }
+        }
+        else
+        {
+            Console.WriteLine("\nError! Account Number Must be 10 digits");
+        }
+    }
+    else
+    {
+        Console.WriteLine("\nInvalid Account Number");
+    }
+}
+
+void BalanceCheck()
+{
+    Console.WriteLine($"\nBalance: N{balance}");
+}
+
+void AirtimeData()
+{
+    Console.WriteLine("\n1. Airtime\n2. Data\n");
+    response = Console.ReadLine() ?? "";
+
+    if (response.All(char.IsDigit) && !string.IsNullOrEmpty(response))
+    {
+        if (response == "1")
+        {
+            Airtime();
+        }
+
+        else if (response == "2")
+        {
+            Data();
+        }
+        else
+        {
+            Console.WriteLine("\nInvalid Option!");
+        }
+    }
+    else
+    {
+        Console.WriteLine("\nInvalid Input!");
+    }
+
+}
+
+void Airtime()
+{
+    Console.WriteLine("\n1. Self\n2. Other\n");
+    response = Console.ReadLine() ?? "";
+
+    if (response.All(char.IsDigit) && !string.IsNullOrEmpty(response))
+    {
+        if (response == "1")
+        {
+            Console.Write("\nEnter Amount: ");
+            response = Console.ReadLine();
+
+            if (decimal.TryParse(response, out decimal amount))
+            {
+                if (amount <= balance)
+                {
+                    balance -= amount;
+                    Console.WriteLine($"\nYou have successfully purchased Airtime of N{amount}! Available balance is N{balance}\n");
+                }
+                else
+                {
+                    Console.WriteLine("\nInsufficient Balance!\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid Amount!\n");
+            }
+        }
+
+        else if (response == "2")
+        {
+            Console.WriteLine("\nEnter recipient\'s phone number\n");
+            string? phoneNumber = Console.ReadLine() ?? "";
+
+            if (phoneNumber.All(char.IsDigit) && !string.IsNullOrEmpty(phoneNumber))
+            {
+                if (phoneNumber.Length == 11)
+                {
+                    Console.Write("Enter Amount: ");
+                    response = Console.ReadLine();
+
+                    if (decimal.TryParse(response, out decimal amount))
+                    {
+                        if (amount <= balance)
+                        {
+                            balance -= amount;
+                            Console.WriteLine($"\nYou have successfully purchased N{amount} airtime to {phoneNumber}. Available balance is N{balance}\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Insuffient Balance!\n");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nInvalid Amount\n");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Phone Number must be 11 digits.\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Phione Number!\n");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error! Select \"1\" or \"2\" to purchase.\n");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid Option!\n");
+    }
+}
+
+void Data()
+{
+    Console.WriteLine("\n1. Self\n2. Other\n");
+    response = Console.ReadLine() ?? "";
+
+    if (response.All(char.IsDigit) && !string.IsNullOrEmpty(response))
+    {
+        if (response == "1")
+        {
+            Console.Write("\nEnter Amount: ");
+            response = Console.ReadLine();
+
+            if (decimal.TryParse(response, out decimal amount))
+            {
+                if (amount <= balance)
+                {
+                    balance -= amount;
+                    Console.WriteLine($"\nYou have successfully purchased Data of N{amount}. Available balance is N{balance}\n");
+                }
+                else
+                {
+                    Console.WriteLine("\nInsufficient Balance!\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nInvalid Amount!\n");
+            }
+        }
+
+        else if (response == "2")
+        {
+            Console.WriteLine("\nEnter recipient\'s phone number\n");
+            string? phoneNumber = Console.ReadLine() ?? "";
+
+            if (phoneNumber.All(char.IsDigit) && !string.IsNullOrEmpty(phoneNumber))
+            {
+                if (phoneNumber.Length == 11)
+                {
+                    Console.Write("Enter Amount: ");
+                    response = Console.ReadLine();
+
+                    if (decimal.TryParse(response, out decimal amount))
+                    {
+                        if (amount <= balance)
+                        {
+                            balance -= amount;
+                            Console.WriteLine($"\nYou have successfully purchased N{amount} Data to {phoneNumber}. Available balance is N{balance}\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Insuffient Balance!\n");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nInvalid Amount\n");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Phone Number must be 11 digits.\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Phone Number!\n");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error! Select \"1\" or \"2\" to purchase.\n");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid Option!\n");
+    }
+}
+
+void Exit()
+{
+    exit = true;
+}
