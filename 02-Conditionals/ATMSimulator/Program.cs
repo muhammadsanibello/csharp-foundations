@@ -1,13 +1,35 @@
 ﻿// ATM Simulator
 Console.WriteLine("\t\t\t\t\t\tFIRST BANK OF NIGERIA (est. 1899)\n");
+Console.WriteLine("\t\t\t\t\t\tWelcome to First Bank of Nigeria\n");
+
+string userName = "minister";
+string? password = "63341234";
+string pin = "12345";
+decimal balance = 5000000m;
+string? response;
+bool exit = false;
+
+while (true)
+{
+    Console.Write("\t\t\t\t\t\tUserName: ");
+    string? username  = Console.ReadLine();
+
+    Console.Write("\t\t\t\t\t\tPassword: ");
+    string? passwordResponse = Console.ReadLine();
+
+    if (username == userName && passwordResponse == password)
+    {
+        Console.Clear();
+        break;
+    }
+    else
+    {
+        Console.WriteLine("\n\t\t\t\t\t\tInvalid Credential! Try again.");
+    }
+        Console.WriteLine();
+}
 
 Console.WriteLine("Welcome  Back User!\n");
-decimal balance = 5000000.00m;
-//string pin = "12345";
-string[] validAccountNumbers = ["7045435653", "8065656661", "7030778463", "8063636110", "8137097889", "7033637425"];
-string? response;
-string? accountNumber;
-bool exit = false;
 
 while (exit == false)
 {
@@ -48,37 +70,41 @@ while (exit == false)
 void Transfer()
 {
     Console.WriteLine("\nEnter recipient\'s account number");
-    accountNumber = Console.ReadLine() ?? "";
+    string accountNumber = Console.ReadLine() ?? "";
 
     if (accountNumber.All(char.IsDigit) && !string.IsNullOrEmpty(accountNumber))
     {
         if (accountNumber.Length == 10)
         {
-            if (validAccountNumbers.Contains(accountNumber))
-            {
-                Console.Write("\nEnter Amount: ");
-                response = Console.ReadLine();
+            Console.Write("\nEnter Amount: ");
+            response = Console.ReadLine();
 
-                if (decimal.TryParse(response, out decimal amount))
+            if (decimal.TryParse(response, out decimal amount))
+            {
+                if (amount <= balance)
                 {
-                    if (amount <= balance)
+                    Console.Write("\nEnter Pin: ");
+                    response = Console.ReadLine();
+
+                    if (response == pin)
                     {
                         balance -= amount;
                         Console.WriteLine($"\nYou have successfully sent N{amount} to {accountNumber}. Your Available balance is N{balance}");
                     }
                     else
                     {
-                        Console.WriteLine($"Insuffient balance! Your current balance is N{balance}");
+                        Console.WriteLine("\nInvalid Pin! Try again");
                     }
+                    
                 }
                 else
                 {
-                    Console.WriteLine("\nInvalid Amount!");
+                    Console.WriteLine($"Insuffient balance! Your current balance is N{balance}");
                 }
             }
             else
             {
-                Console.WriteLine("\nAccount Number Doesn\'t exit");
+                Console.WriteLine("\nInvalid Amount!");
             }
         }
         else
@@ -95,11 +121,11 @@ void Transfer()
 void Withdraw()
 {
     Console.WriteLine("\nEnter Account Number:");
-    accountNumber = Console.ReadLine() ?? "";
+    response = Console.ReadLine() ?? "";
 
-    if (!string.IsNullOrEmpty(accountNumber) && accountNumber.All(char.IsDigit))
+    if (!string.IsNullOrEmpty(response) && response.All(char.IsDigit))
     {
-        if (accountNumber.Length == 10)
+        if (response.Length == 10)
         {
             Console.Write("\nEnter Amount: ");
             response = Console.ReadLine();
@@ -108,8 +134,18 @@ void Withdraw()
             {
                 if (amount <= balance)
                 {
-                    balance -= amount;
-                    Console.WriteLine($"\nYou have successfully withdraw N{amount} to {accountNumber}. You available balance is N{balance}");
+                    Console.Write("\nEnter Pin: ");
+                    response = Console.ReadLine();
+
+                    if (response == pin)
+                    {
+                        balance -= amount;
+                        Console.WriteLine($"\nYou have successfully withdraw N{amount} to {response}. You available balance is N{balance}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Pin! Try again");
+                    }
                 }
                 else
                 {
@@ -134,7 +170,17 @@ void Withdraw()
 
 void BalanceCheck()
 {
-    Console.WriteLine($"\nBalance: N{balance}");
+    Console.Write("\nEnter Pin: ");
+    response = Console.ReadLine();
+
+    if (response == pin)
+    {
+        Console.WriteLine($"\nBalance: N{balance}");
+    }
+    else
+    {
+        Console.WriteLine("\nInvalid Pin! Try Again");
+    }
 }
 
 void AirtimeData()
@@ -181,8 +227,18 @@ void Airtime()
             {
                 if (amount <= balance)
                 {
-                    balance -= amount;
-                    Console.WriteLine($"\nYou have successfully purchased Airtime of N{amount}! Available balance is N{balance}\n");
+                    Console.Write("\nEnter Pin: ");
+                    response = Console.ReadLine();
+
+                    if (response == pin)
+                    {
+                        balance -= amount;
+                        Console.WriteLine($"\nYou have successfully purchased Airtime of N{amount}! Available balance is N{balance}\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nInvalid Pin! Try again");
+                    }
                 }
                 else
                 {
@@ -204,15 +260,25 @@ void Airtime()
             {
                 if (phoneNumber.Length == 11)
                 {
-                    Console.Write("Enter Amount: ");
+                    Console.Write("\nEnter Amount: ");
                     response = Console.ReadLine();
 
                     if (decimal.TryParse(response, out decimal amount))
                     {
                         if (amount <= balance)
                         {
-                            balance -= amount;
-                            Console.WriteLine($"\nYou have successfully purchased N{amount} airtime to {phoneNumber}. Available balance is N{balance}\n");
+                            Console.Write("\nEnter Pin: ");
+                            response = Console.ReadLine();
+
+                            if (response == pin)
+                            {
+                                balance -= amount;
+                                Console.WriteLine($"\nYou have successfully purchased N{amount} airtime to {phoneNumber}. Available balance is N{balance}\n");
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nInvalid Pin! Try again");
+                            }
                         }
                         else
                         {
@@ -261,8 +327,18 @@ void Data()
             {
                 if (amount <= balance)
                 {
-                    balance -= amount;
-                    Console.WriteLine($"\nYou have successfully purchased Data of N{amount}. Available balance is N{balance}\n");
+                    Console.Write("\nEnter Pin: ");
+                    response = Console.ReadLine();
+
+                    if (response == pin)
+                    {
+                        balance -= amount;
+                        Console.WriteLine($"\nYou have successfully purchased Data of N{amount}. Available balance is N{balance}\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nInvalid Pin! Try again");
+                    }
                 }
                 else
                 {
@@ -284,15 +360,25 @@ void Data()
             {
                 if (phoneNumber.Length == 11)
                 {
-                    Console.Write("Enter Amount: ");
+                    Console.Write("\nEnter Amount: ");
                     response = Console.ReadLine();
 
                     if (decimal.TryParse(response, out decimal amount))
                     {
                         if (amount <= balance)
                         {
-                            balance -= amount;
-                            Console.WriteLine($"\nYou have successfully purchased N{amount} Data to {phoneNumber}. Available balance is N{balance}\n");
+                            Console.Write("\nEnter Pin: ");
+                            response = Console.ReadLine();
+
+                            if (response == pin)
+                            {
+                                balance -= amount;
+                                Console.WriteLine($"\nYou have successfully purchased N{amount} Data to {phoneNumber}. Available balance is N{balance}\n");
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nInvalid Pin! Try again");
+                            }
                         }
                         else
                         {
