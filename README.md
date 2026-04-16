@@ -15,7 +15,8 @@ This repository documents my journey learning C# through structured practice and
 * Basics (Variables, Data Types, Strings)
 * Conditionals (if/else logic)
 * Loops & Arrays
-* Methods (in progress)
+* Methods
+* Exceptions
 
 ---
 
@@ -26,6 +27,7 @@ This repository documents my journey learning C# through structured practice and
 * 📊 Student Performance Analyzer
 * 📱 SIM Checker
 * 🚨 Suspicious Activity Detector
+* More...
 
 ---
 
@@ -34,7 +36,8 @@ This repository documents my journey learning C# through structured practice and
 * `01-Basics`
 * `02-Conditionals`
 * `03-Loops&Arrays`
-* `05-Methods`
+* `04-Methods`
+* `05-Exceptions`
 * `Projects`
 * `Microsoft-Learn-Projects`
 
