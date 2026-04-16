@@ -1,0 +1,34 @@
+﻿// try catch exception
+
+using System.Diagnostics;
+using System.Linq.Expressions;
+using System.Runtime.InteropServices;
+
+
+
+try
+{
+    Process1();
+}
+catch
+{
+    Console.WriteLine("An exception has occured");
+}
+
+Console.WriteLine("Exit program");
+
+static void Process1()
+{
+    WriteMessage();
+}
+
+static void WriteMessage()
+{
+    double float1 = 3000.0;
+    double float2 = 0.0;
+    int number1 = 3000;
+    int number2 = 0;
+
+    Console.WriteLine(float1 / float2);
+    Console.WriteLine(number1 / number2);
+}
