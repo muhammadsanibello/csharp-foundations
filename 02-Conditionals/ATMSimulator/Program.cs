@@ -120,51 +120,34 @@ void Transfer()
 
 void Withdraw()
 {
-    Console.WriteLine("\nEnter Account Number:");
-    response = Console.ReadLine() ?? "";
+    Console.Write("Enter Amount: ");
+    response = Console.ReadLine();
 
-    if (!string.IsNullOrEmpty(response) && response.All(char.IsDigit))
+    if (decimal.TryParse(response, out decimal amount))
     {
-        if (response.Length == 10)
+        if (amount <= balance)
         {
-            Console.Write("\nEnter Amount: ");
+            Console.Write("\nEnter pin: ");
             response = Console.ReadLine();
 
-            if (decimal.TryParse(response, out decimal amount))
+            if (response == pin)
             {
-                if (amount <= balance)
-                {
-                    Console.Write("\nEnter Pin: ");
-                    response = Console.ReadLine();
-
-                    if (response == pin)
-                    {
-                        balance -= amount;
-                        Console.WriteLine($"\nYou have successfully withdraw N{amount} to {response}. You available balance is N{balance}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid Pin! Try again");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("\nInsufficient balance!");
-                }
+                balance -= amount;
+                Console.WriteLine($"\nYou have successfully withdraw N{amount}. Available balance is {balance}");
             }
             else
             {
-                Console.WriteLine("\nInvalid Amount!");
+                Console.WriteLine("Invalid Pin!");
             }
         }
         else
         {
-            Console.WriteLine("\nError! Account Number Must be 10 digits");
+            Console.WriteLine("Insufficient balance!");
         }
     }
     else
     {
-        Console.WriteLine("\nInvalid Account Number");
+        Console.WriteLine("Invalid Input");
     }
 }
 
