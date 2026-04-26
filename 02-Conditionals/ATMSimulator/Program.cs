@@ -44,7 +44,14 @@ while (exit == false)
                 Transfer();
                 break;
             case "2":
-                Withdraw();
+                try
+                {
+                    Withdraw();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error! " + ex.Message);
+                }
                 break;
             case "3":
                 BalanceCheck();
@@ -142,7 +149,7 @@ void Withdraw()
         }
         else
         {
-            Console.WriteLine("Insufficient balance!");
+            throw new Exception("Insufficient balance");
         }
     }
     else
