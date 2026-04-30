@@ -4,32 +4,28 @@
 Console.Write("Enter your age: ");
 string? response = Console.ReadLine();
 
-if (int.TryParse(response, out int age))
-{
-    try
-    {
-        ValidRange();
-    }
-    catch (Exception ex)
-    {
-        Console.Write("Error! " + ex.Message);
-    }
-}
-else
+if (!(int.TryParse(response, out int age)))
 {
     Console.WriteLine("Error! Age must be a number.");
+    return;
+}
+
+try
+{
+    ValidRange(age);
+}
+catch (ArgumentOutOfRangeException ex)
+{
+    Console.Write($"Error! {ex.Message}");
 }
 
 // Range validity checking
-void ValidRange()
+void ValidRange(int age)
 {
-    if (age >= 1 && age <= 120)
+    if (age < 1 || age > 120)
     {
-        Console.WriteLine("You are Welcome!");
+        throw new ArgumentOutOfRangeException("age", "Age must be between 1 and 120.");
     }
-    else
-    {
-        throw new Exception("\"InvalidRange\": Age is out of range.");
-    }
-    Console.WriteLine();
+
+    Console.WriteLine("You are Welcome!");
 }
