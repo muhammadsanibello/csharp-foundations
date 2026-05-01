@@ -16,7 +16,7 @@ This repository documents my journey of mastering C# from fundamentals to advanc
   - Classes, Encapsulation, Inheritance, Polymorphism
   - Real-world object-oriented design practice
 
-- Practices/
+- Exercises/
   
   - Focused coding challenges
   - Problem-solving and logic building exercises
@@ -24,7 +24,7 @@ This repository documents my journey of mastering C# from fundamentals to advanc
 - Projects/
   
   - Complete mini-projects and applications
-  - Example: ATM Simulator, Number Analyzer, Fraud Detection tools
+  - Example: ATM Simulator, Email Generator, Online Sales.
 
 ---
 
