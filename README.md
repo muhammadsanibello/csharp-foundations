@@ -65,31 +65,3 @@ This repository is continuously updated as I learn and build.
 🤝 Connect With Me
 
 I am actively learning and open to collaboration, mentorship, and internship opportunities.
-
----* More...
-
----
-
-## 📂 Structure
-
-* `01-Basics`
-* `02-Conditionals`
-* `03-Loops&Arrays`
-* `04-Methods`
-* `05-Exceptions`
-* `Projects`
-* `Microsoft-Learn-Projects`
-
----
-
-## 🎯 Goal
-
-To build a strong programming foundation and become a professional full-stack developer using C# and modern technologies.
-
----
-
-## 📈 Progress
-
-Consistently learning, building, and pushing code to improve every day.
-
----
