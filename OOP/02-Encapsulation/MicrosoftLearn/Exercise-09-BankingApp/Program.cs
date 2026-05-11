@@ -1,6 +1,6 @@
 ﻿// Banking App project
-
 using Exercise_09_BankingApp;
+using System.Globalization;
 
 // Step 1: Create BankCustomer object
 Console.WriteLine("Creating BankCustomer objects...");
@@ -22,7 +22,9 @@ Console.WriteLine($"BankCustomer 3: {customer3.FirstName} {customer3.LastName} {
 
 // Step 2: Create BankAccount objects for customers
 Console.WriteLine("Creating BankAccount objects for customers...");
-BankAccount account1 = new BankAccount(customer1.CustomerId);
+
+//BankAccount account1 = new BankAccount(customer1.CustomerId);
+BankAccount account1 = new BankAccount(customer1.CustomerId, 1000, "Checking");
 BankAccount account2 = new BankAccount(customer2.CustomerId, 1500, "Checking");
 BankAccount account3 = new BankAccount(customer3.CustomerId, 2500, "Checking");
 
@@ -35,20 +37,23 @@ Console.WriteLine($"Account 3: Account # {account3.AccountNumber}, type {account
 Console.WriteLine("\nDemonstrating BankAccount methods...");
 
 // Deposit
-Console.WriteLine("Depositing 500 into Account 1...");
-account1.Deposit(500);
-Console.WriteLine($"Account 1 after deposit: Balance = {account1.Balance}");
+double depositAmount = 500;
+Console.WriteLine($"Depositing {depositAmount.ToString("C", CultureInfo.CurrentCulture)} into account 1...");
+account1.Deposit(depositAmount);
+Console.WriteLine($"Account 1 after deposit: Balance = {account1.Balance.ToString("C", CultureInfo.CurrentCulture)}");
 
 // Withdraw
-Console.WriteLine("Withdrawing 200 from Account 2...");
-bool withdrawSuccess = account2.Withdraw(200);
-Console.WriteLine($"Account 2 after withdrawal: Balance = {account2.Balance}, withdrawal successful: {withdrawSuccess}");
+double withdrawAmount = 200;
+Console.WriteLine($"Withdrawing {withdrawAmount.ToString("C", CultureInfo.CurrentCulture)} from Account 2...");
+bool withdrawSuccess = account2.Withdraw(withdrawAmount);
+Console.WriteLine($"Account 2 after withdrawal: Balance = {account2.Balance.ToString("C", CultureInfo.CurrentCulture)},  Withdrawal successful: {withdrawSuccess}");
 
 // Transfer
-Console.WriteLine("Transferring 300 from Account 3 to Account 1...");
-bool transferSuccess = account3.Transer(account1, 300);
-Console.WriteLine($"Account 3 after transfer: Balance = {account3.Balance}, Transfer successful: {transferSuccess}");
-Console.WriteLine($"Account 1 after receiving transfer: {account1.Balance}");
+double transferAmount = 300;
+Console.WriteLine($"Transferring {transferAmount.ToString("C", CultureInfo.CurrentCulture)} from Account 3 to Account 1...");
+bool transferSuccess = account3.Transer(account1, transferAmount);
+Console.WriteLine($"Account 3 after transfer: Balance = {account3.Balance.ToString("C", CultureInfo.CurrentCulture)}, Transfer successful: {transferSuccess}");
+Console.WriteLine($"Account 1 after receiving transfer: Balance = {account1.Balance.ToString("C", CultureInfo.CurrentCulture)}");
 
 // Apply Interest
 Console.WriteLine("Applying interest to Account 1...");

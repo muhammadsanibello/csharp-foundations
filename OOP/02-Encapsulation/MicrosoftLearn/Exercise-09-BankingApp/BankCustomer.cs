@@ -2,7 +2,7 @@
 
 namespace Exercise_09_BankingApp
 {
-    public class BankCustomer
+    public partial class BankCustomer
     {
         private static int s_nextCustomerId;
         private string _firstName = "Sani";
@@ -34,27 +34,6 @@ namespace Exercise_09_BankingApp
             FirstName = firstName;
             LastName = lastName;
             this.CustomerId = (s_nextCustomerId++).ToString("D10");
-        }
-
-        // Method to return the full name of the customer
-        public string ReturnFullName()
-        {
-            return $"{LastName} {LastName}";
-        }
-
-        // Method to update the customer's name
-        public void UpdateName(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-
-            Console.WriteLine("Name updated successfully");
-        }
-
-        // Method to display the customer information
-        public string DisplayCustomerInfo()
-        {
-            return $"Customer ID: {CustomerId}, Name {ReturnFullName}";
         }
 
     }

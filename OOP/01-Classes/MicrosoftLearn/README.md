@@ -7,5 +7,7 @@ Focus areas:
 - Constructors
 - Static members
 - Object instantiation
+- Partial members
+- Finalizers
 
 These exercises support my understanding of OOP fundamentals.

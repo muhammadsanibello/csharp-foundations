@@ -7,6 +7,10 @@ This folder contains my practice exercises and mini projects while learning:
 - Validation
 - Access Modifiers
 - Immutable Classes
+- Copy constructors
+- Object initializers
+- Extension method
+- Partial classes
 
 These exercises were completed while studying Microsoft Learn and building my own projects independently.
 
@@ -43,6 +47,8 @@ These exercises were completed while studying Microsoft Learn and building my ow
 7. Short-Hand Properties
 8. Immutable Class
 9. Banking Application
+10. Object initializers
+11. Copy-Constructors
 
 ---
 
@@ -70,6 +76,25 @@ Features:
 - Checkout system
 - Stock reduction
 - Object composition
+
+## Inventory Management System
+Features:
+- Product management
+- Stock reduction
+- Stock increasing
+- Object composition
+- Inventory (WareHouse)
+
+## Hotel Reservation System
+Features:
+- Room management
+- Reserve management
+- Guest management
+- Hotel management
+- Booking a room
+- Releasing a room
+- Searching a room
+- Adding/Removing room
 
 ---
 
