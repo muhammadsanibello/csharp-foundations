@@ -1,6 +1,4 @@
-﻿// ATM system
-
-using ATM_System;
+﻿using ATM_System;
 
 // Create Account objects
 var account1 = new BankAccount(5000, "1234", "Saving");

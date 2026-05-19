@@ -1,6 +1,4 @@
-﻿// Simple ATM Simulation
-
-using SimpleATM_Simulation;
+﻿using SimpleATM_Simulation;
 
 var account1 = new ATMAccount("Sani Bello", "1234", 5000);
 var account2 = new ATMAccount("Saad Bello", "6334", 6000);

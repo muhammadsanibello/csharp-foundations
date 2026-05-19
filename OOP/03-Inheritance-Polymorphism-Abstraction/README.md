@@ -66,6 +66,12 @@ Features:
 
 ---
 
+# Notes
+
+I intentionally used arrays instead of collections like `List<T>` because I haven't learned collections yet.
+
+---
+
 ## Author
 
 Muhammad Sani Bello

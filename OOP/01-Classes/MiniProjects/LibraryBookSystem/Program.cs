@@ -1,7 +1,6 @@
-﻿// Library Book System
+﻿using LibraryBookSystem;
 
-using LibraryBookSystem;
-
+// Book objects
 var book1 = new Book("Sugar Girl", "Kola Bibi");
 var book2 = new Book("Life Changer", "Khadija Jalli");
 

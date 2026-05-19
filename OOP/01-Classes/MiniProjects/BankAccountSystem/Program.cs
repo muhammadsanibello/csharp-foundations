@@ -1,6 +1,4 @@
-﻿// Bank Account System
-
-using BankAccountSystem;
+﻿using BankAccountSystem;
 
 var account1 = new BankAccount();
 var account2 = new BankAccount("Sani");

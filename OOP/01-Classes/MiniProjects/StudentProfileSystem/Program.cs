@@ -1,6 +1,4 @@
-﻿// Student Profile System
-
-using StudentProfileSystem;
+﻿using StudentProfileSystem;
 
 var student1 = new Student("Muhammad", 20, "Computer Science");
 var student2 = new Student("Usman", 26, "Computer Science");

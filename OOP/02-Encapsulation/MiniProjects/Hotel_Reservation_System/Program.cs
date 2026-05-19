@@ -1,6 +1,4 @@
-﻿// Hotel Reservation Management System
-
-using Hotel_Reservation_System;
+﻿using Hotel_Reservation_System;
 
 try
 {

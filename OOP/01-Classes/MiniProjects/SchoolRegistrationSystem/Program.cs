@@ -1,6 +1,4 @@
-﻿// Simple School Registration System
-
-using SchoolRegistrationSystem;
+﻿using SchoolRegistrationSystem;
 
 // Student objects
 var student1 = new Student("Muhammad Sani Bello");

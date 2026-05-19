@@ -1,6 +1,4 @@
-﻿// Course Registration System
-
-using CourseRegistrationSystem;
+﻿using CourseRegistrationSystem;
 
 // Course objects
 var course1 = new Course("Data Structure", "CSC301");

@@ -1,7 +1,6 @@
-﻿// Employee Salary System
+﻿using EmployeeSalarySystem;
 
-using EmployeeSalarySystem;
-
+// Employee objects
 var employee1 = new Employee("Sani Bello", 2000000, 500000);
 var employee2 = new Employee("Usman Musa", 3000000, 700000);
 

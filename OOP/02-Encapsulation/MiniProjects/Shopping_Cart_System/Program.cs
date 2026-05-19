@@ -1,6 +1,4 @@
-﻿// Shopping Cart System
-
-using Shopping_Cart_System;
+﻿using Shopping_Cart_System;
 
 // Product objects
 var product1 = new Product("Phone", 200000, 30);

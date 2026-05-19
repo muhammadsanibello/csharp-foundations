@@ -1,6 +1,4 @@
-﻿// Wallet / Expense Tracker
-
-using Wallet_Expense_Tracker;
+﻿using Wallet_Expense_Tracker;
 
 var wallet = new Wallet();
 

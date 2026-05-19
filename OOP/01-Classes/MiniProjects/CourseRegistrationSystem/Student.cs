@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CourseRegistrationSystem
 {
@@ -20,6 +18,7 @@ namespace CourseRegistrationSystem
 
         public void EnrollCourse(Course course)
         {
+            // Prevent going out of bounds
             if (courseCount < 10)
             {
                 listOfCourses[courseCount] = course;

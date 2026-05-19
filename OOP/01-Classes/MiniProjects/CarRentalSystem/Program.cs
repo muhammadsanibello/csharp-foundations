@@ -1,6 +1,4 @@
-﻿// Car Rental System
-
-using CarRentalSystem;
+﻿using CarRentalSystem;
 
 var car1 = new Car();
 var car2 = new Car("Toyota", "Civic", 2025);

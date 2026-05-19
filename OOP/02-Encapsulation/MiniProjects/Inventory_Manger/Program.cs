@@ -1,6 +1,4 @@
-﻿// Inventor Management System
-
-using Inventory_Manger;
+﻿using Inventory_Manger;
 
 try
 {
