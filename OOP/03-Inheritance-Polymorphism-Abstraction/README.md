@@ -27,6 +27,17 @@ This folder contains my learning exercises and mini projects focused on the core
 - Private Members in Inheritance
 - Public Members in Inheritance
 - Override Conflict
+- House Pet Class
+- Transitive Nature
+- Abstract Keyword
+- Sealed Keyword
+- Implicit Inheritance
+- Naming Conflict
+- Override Implicit Inheritance
+- Access Constructor
+- Inheritance Based Polymorphism
+- is & as Keywords
+- Interface Based Polymorphism
 
 ---
 

@@ -24,6 +24,7 @@ public class Program
         Cat cat = new Cat { Age = 10, Name = "Fluffy" };
 
         // Declare and instantiate a new Cat object by using an object initializer.
-        Cat sameCat = new Cat("fluffy") { Age = 10 };
+        Cat sameCat = new Cat("fluffy") { Name = "10" };
+        Console.WriteLine(sameCat.Name);
     }
 }

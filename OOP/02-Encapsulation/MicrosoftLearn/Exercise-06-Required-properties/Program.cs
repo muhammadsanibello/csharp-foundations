@@ -20,5 +20,6 @@ class Program
     {
         var aPerson = new Person("Sani");
         aPerson = new Person { FirstName = "Sani" };
+        Console.WriteLine(aPerson.FirstName);
     }
 }

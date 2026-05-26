@@ -35,6 +35,21 @@ These exercises were completed while studying Microsoft Learn documentation and 
 | `Exercise-04-Interface_Inheritance` | Interface inheritance concepts |
 | `Exercise-05-Internal_Interfaces` | Access modifiers and internal interfaces |
 
+# More Exercises:
+- Interface Properties
+- Interface Methods
+- Default Implementation
+- Interface As a Parameter
+- IEquatable Interface
+- IEnumerable Interface
+- IDisposable Interface
+- IComparable Interface
+- Explicit Interface Members
+- Multiple Interface Implementation
+- Direct Dependency
+- Refactor Using Interface
+- Training Projects
+
 ---
 
 # 🚀 Mini Projects

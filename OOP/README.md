@@ -111,13 +111,6 @@ Learning how independent components communicate through contracts.
 - Interface inheritance
 - Explicit implementation
 
-### Microsoft Learn Exercises
-- Payment Processor
-- Logger Interface
-- Explicit Implementation
-- Interface Inheritance
-- Internal Interfaces
-
 ### Mini Projects
 #### Payment Processing System
 A modular payment simulation system supporting:
