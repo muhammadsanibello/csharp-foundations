@@ -1,16 +1,16 @@
-### C# Collections
+## C# Collections
 
 This folder contains my practice, exercises, and mini-project refactors focused on learning C# collections.
 
-## Topics Covered
+# Topics Covered
 
 - List<T>
 - HashSet<T>
 - Dictionary<TKey, TValue>
 
-## Folder Structure
+# Folder Structure
 
-# 01-List
+01-List
 
 Practice and exercises using "List<T>" for dynamic collections.
 
@@ -20,7 +20,7 @@ Examples:
 - Managing expandable data collections
 - Basic CRUD operations
 
-# 02-HashSet
+02-HashSet
 
 Practice using "HashSet<T>" to store unique items and prevent duplicates.
 
@@ -30,7 +30,7 @@ Examples:
 - Email uniqueness
 - Shopping cart items
 
-# 03-Dictionary
+03-Dictionary
 
 Practice using "Dictionary<TKey, TValue>" for fast key-based lookup.
 
@@ -53,7 +53,7 @@ Projects include:
 - Shopping Cart System
 - Course Registration System
 
-## Concepts Practiced
+# Concepts Practiced
 
 - Encapsulation
 - Abstraction
@@ -67,7 +67,7 @@ Projects include:
 - Transaction tracking
 - Error handling with exceptions
 
-## What I Learned
+# What I Learned
 
 Through these projects I learned:
 
@@ -78,13 +78,13 @@ Through these projects I learned:
 - How collections improve scalability and maintainability
 - How OOP and collections work together in real applications
 
-## Tech Stack
+# Tech Stack
 
 - C#
 - .NET
 - Visual Studio Code
 - Git & GitHub
 
-## Author
+# Author
 
 Muhammad Sani Bello
