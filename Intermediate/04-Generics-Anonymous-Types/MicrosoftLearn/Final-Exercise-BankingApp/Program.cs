@@ -1,0 +1,59 @@
+﻿using BankApp;
+
+Console.WriteLine("Welcome to the Bank App!");
+
+// Task 3: Step 2 - Update Program to create a Bank and open 2 accounts.
+var bank = new Bank();
+
+var accountHolderDetails = new AccountHolderDetails("Tim Shao", "123456789", "123 Elm Street");
+var accountNumber = new BankAccountNumber("000012345678");
+var checking = new BankAccount(accountNumber, BankAccountType.Checking, accountHolderDetails, 500m);
+
+var accountHolderDetails3 = new AccountHolderDetails("Ni Kang", "987654321", "456 Oak Avenue");
+var accountNumber3 = new BankAccountNumber("000123456789");
+var savings = new BankAccount(accountNumber3, BankAccountType.Savings, accountHolderDetails3, 1200m);
+
+bank.OpenAccount(checking);
+bank.OpenAccount(savings);
+
+// Keep a reference named 'bankAccount' for the reporting tasks later in this lab.
+var bankAccount = checking;
+
+// Task 3: Step 3 - Retrieve account and perform transactions.
+var selected = bank.GetAccount(accountNumber3);
+selected.AddTransaction(321m, "Depsoit");
+selected.AddTransaction(-123m, "ATM Withdrawal");
+Console.WriteLine(selected.DisplayAccountInfo());
+
+Console.WriteLine($"Account type description: {bankAccount.AccountType.GetDescription()}");
+Console.WriteLine(bankAccount.DisplayAccountInfo());
+
+bankAccount.AddTransaction(200m, "Deposit");
+bankAccount.AddTransaction(-50m, "ATM Withdrawal");
+
+Console.WriteLine(bankAccount.DisplayAccountInfo());
+
+// Task 2: Step 6 - Consider the DisplayTransactions() method call. 
+bankAccount.DisplayTransactions();
+
+// Task 5: Step 1 - Add an anonymous-type transaction report (Select(...) into new { ... }).
+
+
+// Task 6: Step 3 - Update Program to call bankAccount.GetDailyTotals() (named record) for API-friendly reporting.
+// Task 5: Step 2 - Add an anonymous-type daily totals report (GroupBy(...) + Select(...)).
+
+
+// Task 5: Step 3 - Add an anonymous-type "top debits" report (Where/OrderBy/Take).
+
+
+// Task 4: Step 8 - Add Fee transactions to the account.
+var feeLedger = new Ledger<Fee>();
+feeLedger.Add(new Fee(-2.50m, DateTime.Now, "Monthly service fee"));
+Console.WriteLine($"Fee ledger total: {feeLedger.Total():C}");
+
+AccountHolderDetails accountHolderDetails2 = new("Tim Shao", "123456789", "123 Elm Street");
+
+Console.WriteLine($"Are customers equal? {accountHolderDetails == accountHolderDetails2}");
+
+BankAccountNumber accountNumber2 = new BankAccountNumber("000123456789");
+Console.WriteLine($"Original Account Number: {accountNumber2}");
