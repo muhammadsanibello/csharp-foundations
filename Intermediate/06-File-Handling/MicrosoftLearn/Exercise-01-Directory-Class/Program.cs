@@ -55,3 +55,19 @@ File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), docPath, "greeti
 // Read data from file
 string str = File.ReadAllText(@"C:\Users\FUJITSU\Documents\greeting.tx");
 Console.WriteLine(str);
+
+// Path Class Operation
+string directoryPath = @"C:\ExampleDirectory";
+string fileName = "example.txt";
+
+// Combine directory and file name to create a full path
+string fullPath = Path.Combine(directoryPath, fileName);
+Console.WriteLine("Full Path: " + fullPath);
+
+// Get the file name without extension
+string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fullPath);
+Console.WriteLine("File Name Without Extension: " + fileNameWithoutExtension);
+
+// Get the file extension
+string fileExtension = Path.GetExtension(fullPath);
+Console.WriteLine("File Extension: " + fileExtension);
