@@ -1,12 +1,12 @@
-# 📦 08 - JSON Serialization & Deserialization
+# JSON Serialization & Deserialization
 
 This folder contains my practice exercises and project refactoring while learning **JSON Serialization and Deserialization** in C# using **System.Text.Json**.
 
 ---
 
-# 📚 Topics Covered
+# Topics Covered
 
-## ✅ Exercise 01 - JsonSerializer Class
+## Exercise 01 - JsonSerializer Class
 
 - Serialize C# objects into JSON
 - Deserialize JSON back into C# objects
@@ -15,7 +15,7 @@ This folder contains my practice exercises and project refactoring while learnin
 
 ---
 
-## ✅ Exercise 02 - Customize Serialization Behaviour
+## Exercise 02 - Customize Serialization Behaviour
 
 Learned how to customize JSON serialization using:
 
@@ -30,7 +30,7 @@ Learned how to customize JSON serialization using:
 
 ---
 
-## ✅ Exercise 03 - Customize Deserialization Behaviour
+## Exercise 03 - Customize Deserialization Behaviour
 
 Learned how to customize JSON deserialization using:
 
@@ -43,7 +43,7 @@ Learned how to customize JSON deserialization using:
 
 ---
 
-## ✅ Exercise 04 - Manage Complex Objects
+## Exercise 04 - Manage Complex Objects
 
 Worked with:
 
@@ -55,9 +55,9 @@ Worked with:
 
 ---
 
-# 🔄 Refactored Projects
+# Refactored Projects
 
-## 📝 To-Do Application
+## To-Do Application
 
 Refactored the application to use **JSON** instead of plain text for persistent storage.
 
@@ -69,7 +69,7 @@ Refactored the application to use **JSON** instead of plain text for persistent 
 
 ---
 
-## 📦 Inventory Management System
+## Inventory Management System
 
 Refactored the inventory system to use JSON as its storage format.
 
@@ -82,7 +82,7 @@ Refactored the inventory system to use JSON as its storage format.
 
 ---
 
-# 🛠 Skills Gained
+# Skills Gained
 
 - JSON Serialization
 - JSON Deserialization
@@ -95,7 +95,7 @@ Refactored the inventory system to use JSON as its storage format.
 
 ---
 
-# 💻 Technologies Used
+# Technologies Used
 
 - C#
 - .NET
@@ -104,7 +104,7 @@ Refactored the inventory system to use JSON as its storage format.
 
 ---
 
-# 🎯 Learning Outcome
+# Learning Outcome
 
 After completing this module, I can:
 
@@ -117,6 +117,6 @@ After completing this module, I can:
 
 ---
 
-# 🚀 Next Module
+# Next Module
 
 **Asynchronous Programming (Async & Await)**

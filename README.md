@@ -1,10 +1,10 @@
-C# Foundations Journey 🚀
+C# Foundations Journey 
 
 This repository documents my journey of mastering C# from fundamentals to advanced backend development using ASP.NET Core.
 
 ---
 
-📁 Project Structure
+Project Structure
 
 - Fundamentals/
   
@@ -28,7 +28,7 @@ This repository documents my journey of mastering C# from fundamentals to advanc
 
 ---
 
-🎯 Goals
+Goals
 
 - Build strong C# fundamentals
 - Master Object-Oriented Programming (OOP)
@@ -38,7 +38,7 @@ This repository documents my journey of mastering C# from fundamentals to advanc
 
 ---
 
-🛠 Tech Stack
+Tech Stack
 
 - Language: C#
 - Platform: .NET
@@ -47,7 +47,7 @@ This repository documents my journey of mastering C# from fundamentals to advanc
 
 ---
 
-📌 Learning Approach
+Learning Approach
 
 - Code 5–6 days per week
 - Focus on building projects over watching tutorials
@@ -56,12 +56,12 @@ This repository documents my journey of mastering C# from fundamentals to advanc
 
 ---
 
-📈 Progress
+Progress
 
 This repository is continuously updated as I learn and build.
 
 ---
 
-🤝 Connect With Me
+Connect With Me
 
 I am actively learning and open to collaboration, mentorship, and internship opportunities.

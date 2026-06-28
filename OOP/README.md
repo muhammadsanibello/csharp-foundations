@@ -6,7 +6,7 @@ This folder documents my structured journey through the core principles of softw
 
 ---
 
-# 🎯 Learning Goal
+# Learning Goal
 
 My focus is to build strong backend engineering foundations by mastering:
 
@@ -24,7 +24,7 @@ This folder follows a disciplined roadmap where each topic is learned step-by-st
 
 ---
 
-# 📂 Folder Structure
+# Folder Structure
 
 ## 01 - Classes
 
@@ -135,7 +135,7 @@ Learn how scalable backend systems are designed using contracts and interchangea
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 - C#
 - .NET
@@ -145,7 +145,7 @@ Learn how scalable backend systems are designed using contracts and interchangea
 
 ---
 
-# 🧠 Engineering Concepts Practiced
+# Engineering Concepts Practiced
 
 Throughout this folder, I practiced:
 
@@ -160,7 +160,7 @@ Throughout this folder, I practiced:
 
 ---
 
-# 🚀 Long-Term Vision
+# Long-Term Vision
 
 This folder is part of my larger roadmap toward becoming a:
 
@@ -180,15 +180,13 @@ Future learning stages include:
 
 ---
 
-# 🌍 Personal Mission
+# Personal Mission
 
 One of my long-term ambitions is to build impactful software systems that solve real-world problems in my region, especially around:
 - Security systems
 - Asset protection
 - Digital infrastructure
 - Community-focused software
-
-A future project planned in this roadmap is **AssetGuard**, a software concept focused on helping mitigate phone theft through device registration, reporting systems, and ownership verification.
 
 ---
 
@@ -212,7 +210,7 @@ I intentionally used arrays instead of collections like `List<T>` throughout thi
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 Muhammad Sani Bello 
 Computer Science Student | Aspiring Backend & Full-Stack Developer

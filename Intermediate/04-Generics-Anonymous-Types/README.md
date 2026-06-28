@@ -2,7 +2,7 @@
 
 This folder contains my practice work, mini-project, and refactored implementations while learning Generics and Anonymous types concepts.
 
-## 📚 Topics Covered
+## Topics Covered
 
 - Generics
 - Anonymous Types
@@ -13,7 +13,7 @@ This folder contains my practice work, mini-project, and refactored implementati
 
 ---
 
-# 📂 Folder Structure
+# Folder Structure
 
 ## MicrosoftLearn
 Contains exercises and examples completed from Microsoft Learn modules.
@@ -34,7 +34,7 @@ Contains improved/refactored version of previous project with:
 
 ---
 
-# 🎯 Learning Goals
+# Learning Goals
 
 The purpose of this section is to:
 
@@ -46,7 +46,7 @@ The purpose of this section is to:
 
 ---
 
-# 🛠 Technologies Used
+# Technologies Used
 
 - C#
 - .NET
@@ -54,7 +54,7 @@ The purpose of this section is to:
 
 ---
 
-# 🚀 Current Progress
+# Current Progress
 
 - Completed foundational OOP concepts
 - Built multiple console-based systems
@@ -63,7 +63,7 @@ The purpose of this section is to:
 
 ---
 
-# 📌 Next Goals
+# Next Goals
 
 - LINQ
 - File Handling
@@ -75,7 +75,7 @@ The purpose of this section is to:
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 Muhammad Sani Bello  
 Computer Science Student | Aspiring Backend Developer

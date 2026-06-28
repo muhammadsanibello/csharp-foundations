@@ -6,7 +6,7 @@ The goal of this section is to deeply understand how software components communi
 
 ---
 
-# 📚 Topics Covered
+# Topics Covered
 
 - Interfaces
 - Abstract classes
@@ -21,7 +21,7 @@ The goal of this section is to deeply understand how software components communi
 
 ---
 
-# 📂 Folder Structure
+# Folder Structure
 
 ## Microsoft Learn Exercises
 
@@ -35,24 +35,11 @@ These exercises were completed while studying Microsoft Learn documentation and 
 | `Exercise-04-Interface_Inheritance` | Interface inheritance concepts |
 | `Exercise-05-Internal_Interfaces` | Access modifiers and internal interfaces |
 
-# More Exercises:
-- Interface Properties
-- Interface Methods
-- Default Implementation
-- Interface As a Parameter
-- IEquatable Interface
-- IEnumerable Interface
-- IDisposable Interface
-- IComparable Interface
-- Explicit Interface Members
-- Multiple Interface Implementation
-- Direct Dependency
-- Refactor Using Interface
-- Training Projects
+- More Er
 
 ---
 
-# 🚀 Mini Projects
+# Mini Projects
 
 ## 1. Payment Processing System
 
@@ -102,7 +89,7 @@ A simplified e-commerce backend system built using OOP principles.
 
 ---
 
-# 🧠 What I Learned
+# What I Learned
 
 Through these projects, I learned:
 
@@ -115,7 +102,7 @@ Through these projects, I learned:
 
 ---
 
-# 🎯 Learning Philosophy
+# Learning Philosophy
 
 I am following a structured roadmap focused on:
 1. Strong programming fundamentals
@@ -127,7 +114,7 @@ Instead of skipping fundamentals, these projects were intentionally built using 
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 - C#
 - .NET
@@ -136,7 +123,7 @@ Instead of skipping fundamentals, these projects were intentionally built using 
 
 ---
 
-# 📌 Current Learning Stage
+# Current Learning Stage
 
 This folder represents my progress during:
 - Week 5–6 of my C# roadmap
@@ -156,7 +143,7 @@ I intentionally used arrays instead of collections like `List<T>` because I have
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 Muhammad Sani Bello 
 Computer Science Student | Aspiring Backend & Full-Stack Developer
