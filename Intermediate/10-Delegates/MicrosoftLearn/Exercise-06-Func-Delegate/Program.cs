@@ -1,0 +1,38 @@
+﻿public class TestClass
+{
+    static void Main()
+    {
+        Random random = new();
+        List<Customer> customers = new();
+
+        // Create 10 customers with random ages and IDs
+        for (int i = 0; i < 10; i++)
+        {
+            string customerID = random.Next(10000000, 99999999).ToString();
+            int age = random.Next(30, 51);
+            customers.Add(new Customer(customerID, age));
+        }
+
+        // Define the Func delegate for comparison
+        Func<Customer, Customer, int> compare = (c1, c2) => c2.Age.CompareTo(c1.Age);
+        customers.Sort((c1, c2) => compare(c1, c2));
+
+        // Print sorted customers
+        foreach (var customer in customers)
+        {
+            Console.WriteLine($"ID: {customer.CustomerId}, Age: {customer.Age}");
+        }
+    }
+}
+
+public class Customer
+{
+    public string? CustomerId { get; set; }
+    public int Age { get; set; }
+
+    public Customer(string custId, int age)
+    {
+        CustomerId = custId;
+        Age = age;
+    }
+}
