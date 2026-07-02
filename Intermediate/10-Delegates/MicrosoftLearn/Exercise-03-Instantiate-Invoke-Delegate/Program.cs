@@ -14,7 +14,7 @@ public class Program
         Notify notifyLambda = (message) => Console.WriteLine($"Lambda notification: {message}");
 
         // Invoke the delegate
-        notifyMethodGroup("Hello, World");
+        notifyMethodGroup.Invoke("Hello, World");
 
         // Invoke the delegate
         notifyAnonymous("Hello from Anonymous Method!");
