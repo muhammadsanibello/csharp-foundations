@@ -1,67 +1,203 @@
-C# Foundations Journey 
+# C# Foundations
 
-This repository documents my journey of mastering C# from fundamentals to advanced backend development using ASP.NET Core.
+A comprehensive collection of my C# learning journey, practice exercises, and real-world projects built while mastering modern C# and .NET.
 
----
-
-Project Structure
-
-- Fundamentals/
-  
-  - Basics, Conditionals, Loops, Methods, Exceptions
-  - Core programming concepts and small exercises
-
-- OOP/
-  
-  - Classes, Encapsulation, Inheritance, Polymorphism
-  - Real-world object-oriented design practice
-
-- Exercises/
-  
-  - Focused coding challenges
-  - Problem-solving and logic building exercises
-
-- Projects/
-  
-  - Complete mini-projects and applications
-  - Example: ATM Simulator, Email Generator, Online Sales.
+This repository documents my progress from beginner concepts to intermediate software development following Microsoft Learn, personal practice, and project-based learning.
 
 ---
 
-Goals
+## Repository Structure
 
-- Build strong C# fundamentals
-- Master Object-Oriented Programming (OOP)
-- Develop real-world backend applications
-- Transition into ASP.NET Core development
-- Become internship-ready within 10 months
-
----
-
-Tech Stack
-
-- Language: C#
-- Platform: .NET
-- Tools: Visual Studio / VS Code
-- Version Control: Git & GitHub
+```
+Exercises/
+Fundamentals/
+OOP/
+Intermediate/
+Projects/
+```
 
 ---
 
-Learning Approach
+# Learning Progress
 
-- Code 5–6 days per week
-- Focus on building projects over watching tutorials
-- Push code consistently to GitHub
-- Refactor and improve old code regularly
+## Fundamentals
+
+- Variables
+- Data Types
+- Operators
+- Input & Output
+- Conditional Statements
+- Loops
+- Methods
+- Arrays
+- Strings
 
 ---
 
-Progress
+## Object-Oriented Programming
 
-This repository is continuously updated as I learn and build.
+- Classes & Objects
+- Constructors
+- Properties
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Interfaces
+- Abstract Classes
+- Method Overriding
+- Method Overloading
 
 ---
 
-Connect With Me
+## Collections & LINQ
 
-I am actively learning and open to collaboration, mentorship, and internship opportunities.
+- List<T>
+- Dictionary<TKey, TValue>
+- HashSet<T>
+- Queue<T>
+- Stack<T>
+- LINQ Queries
+- Filtering
+- Ordering
+- Projection
+
+---
+
+## File Handling
+
+- File
+- Directory
+- StreamReader
+- StreamWriter
+- FileStream
+- Reading Files
+- Writing Files
+
+---
+
+## Exception Handling
+
+- try/catch/finally
+- Custom Exceptions
+- Throwing Exceptions
+- Exception Best Practices
+
+---
+
+## JSON
+
+- Serialization
+- Deserialization
+- JsonSerializerOptions
+- Custom Serialization
+- Custom Deserialization
+- Reading JSON Files
+- Writing JSON Files
+
+---
+
+## Delegates
+
+- Delegate Declaration
+- Delegate Instantiation
+- Multicast Delegates
+- Action
+- Func
+- Variance
+- Generic Delegates
+
+---
+
+## Events
+
+- Event Declaration
+- EventHandler
+- EventHandler<T>
+- Custom EventArgs
+- Raising Events
+- Event Inheritance
+- Event-driven Programming
+
+---
+
+## Async Programming
+
+- async
+- await
+- Task
+- Task<T>
+- Parallel Programming
+- Concurrent Execution
+
+---
+
+# Projects
+
+## Contact Manager
+
+Features
+
+- CRUD Operations
+- File Persistence
+- JSON Storage
+- Search Contacts
+
+---
+
+## Inventory Management System
+
+Features
+
+- Product Management
+- Stock Control
+- Selling
+- Restocking
+- JSON Save/Load
+- Inventory Statistics
+- Low Stock Detection
+- Event-driven Notifications
+- Product Added Event
+- Product Deleted Event
+
+---
+
+# Technologies
+
+- C#
+- .NET 10
+- Visual Studio 2026
+- Git
+- GitHub
+
+---
+
+# Current Roadmap
+
+- ✅ Fundamentals
+- ✅ OOP
+- ✅ Collections
+- ✅ LINQ
+- ✅ File Handling
+- ✅ Exception Handling
+- ✅ JSON
+- ✅ Delegates
+- ✅ Events
+- ✅ Async/Await
+
+## Next
+
+- Database & SQL
+- Entity Framework Core
+- ASP.NET Core Web API
+- Authentication & Authorization
+- Clean Architecture
+- Dependency Injection
+- Testing
+- Docker
+- Azure
+
+---
+
+## About Me
+
+Computer Science student from Nigeria learning backend development with C# and ASP.NET Core.
