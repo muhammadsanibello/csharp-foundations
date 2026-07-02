@@ -194,7 +194,7 @@ One of my long-term ambitions is to build impactful software systems that solve 
 
 This folder reflects a strong belief in:
 
-> “Master fundamentals deeply before chasing frameworks.”
+>= “Master fundamentals deeply before chasing frameworks.”
 
 Instead of rushing into advanced technologies, this journey focuses on:
 - Consistency
