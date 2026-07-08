@@ -1,8 +1,12 @@
 ﻿using System;
 
-namespace Logging_System
+namespace LoggingSystem
 {
-    internal class Level
+    public enum Level
     {
+        Information,
+        Warning,
+        Error,
+        Critical
     }
 }

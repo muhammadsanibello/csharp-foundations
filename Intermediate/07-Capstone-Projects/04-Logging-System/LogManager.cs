@@ -1,10 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace _04_Logging_System
+namespace LoggingSystem
 {
-    internal class LogManager
+    public class LogManager
     {
+        // Dictionary for storing all logs and allow fast lookup by ID
+        private Dictionary<string, LogEntry> _logs = new();
+
+        // Method for creating new log
+        public void CreateLog(LogEntry logEntry)
+        {
+            if (_logs.ContainsKey(logEntry.Id))
+            {
+                throw new ArgumentException("Log with same Id already exist");
+            }
+
+            _logs.Add(logEntry.Id, logEntry);
+        }
+
+        // Method for viewing all logs
+        public IEnumerable<LogEntry> logEntries()
+        {
+            if (_logs.Count == 0)
+            {
+                return Enumerable.Empty<LogEntry>();
+            }
+
+            return _logs.Values;
+        }
+
+        // Method for Searching log
+        public LogEntry? SearchLog(string id)
+        {
+            IdValidation.ValidateId(id);
+
+            if (_logs.TryGetValue(id, out var logEntry))
+            {
+                return logEntry;
+            }
+
+            return null;
+        }
+
+        // Method for deleting a log
+        public bool DeleteLog(string id)
+        {
+            IdValidation.ValidateId(id);
+
+            return _logs.Remove(id);
+        }
+
+        // Method for clearing the _log data
+        public void ClearLog()
+        {
+            if (_logs.Count == 0)
+            {
+                return;
+            }
+
+            _logs.Clear();
+        }
     }
 }

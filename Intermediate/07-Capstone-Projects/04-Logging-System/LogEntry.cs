@@ -1,10 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace _04_Logging_System
+namespace LoggingSystem
 {
-    internal class LogEntry
+    public class LogEntry
     {
+        public string Id { get; }
+        public string Message { get; }
+        public Level Level { get; }
+        public LogSource Source { get; }
+        public DateTime DateCreated { get; }
+
+        public LogEntry(string id, string message, Level level, LogSource source, DateTime dateCreated)
+        {
+            IdValidation.ValidateId(id);
+
+            if (string.IsNullOrWhiteSpace(message)) throw new ArgumentException("Invalid message");
+
+            Id = id;
+            Message = message;
+            Level = level;
+            Source = source;
+            DateCreated = dateCreated;
+        }
     }
 }

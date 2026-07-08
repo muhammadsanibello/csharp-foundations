@@ -1,10 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace _04_Logging_System
+namespace LoggingSystem
 {
-    internal class LogSource
+    public enum LogSource
     {
+        Inventory,
+        Sales,
+        Authentication,
+        Payment,
+        Reporting,
+        Notification,
+        Database
     }
 }

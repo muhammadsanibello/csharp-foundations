@@ -1,10 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace _04_Logging_System
+namespace LoggingSystem
 {
-    internal class IdValidation
+    public static class IdValidation
     {
+        public static void ValidateId(string id)
+        {
+            if (string.IsNullOrWhiteSpace(id) || !id.All(char.IsDigit))
+            {
+                throw new ArgumentException("Invalid Id");
+            }
+        }
     }
 }
