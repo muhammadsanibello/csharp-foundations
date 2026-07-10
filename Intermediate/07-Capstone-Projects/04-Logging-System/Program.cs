@@ -17,6 +17,7 @@ while (input != "0")
     switch (input)
     {
         case "1":
+            // Create a log object
 
             Console.Write("Enter Log ID: ");
             string? id = Console.ReadLine();
@@ -24,10 +25,31 @@ while (input != "0")
             Console.Write("Enter Log message: ");
             string? message = Console.ReadLine();
 
+            Console.WriteLine("Select an error level:");
             Level level = EnumInputHelper.GetEnumChoice<Level>();
+
+            Console.WriteLine("Select a log source:");
             LogSource logSource = EnumInputHelper.GetEnumChoice<LogSource>();
 
             manager.CreateLog(new LogEntry(id, message, level, logSource, DateTime.Now));
+
+            break;
+
+        case "2":
+            // View logs
+
+            Console.WriteLine("===== Available logs =====\n");
+
+            if (!manager.logEntries().Any())
+            {
+                Console.WriteLine("No log available\n");
+                break;
+            }
+
+            foreach (var log in manager.logEntries())
+            {
+                Console.WriteLine(log);
+            }
 
             break;
     }
