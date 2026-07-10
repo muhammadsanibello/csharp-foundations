@@ -69,6 +69,22 @@ while (input != "0")
 
             break;
 
+        case "4":   // Delete a log
+
+            Console.Write("Enter a log ID: ");
+            input = Console.ReadLine();
+
+            var removeSuccess = manager.DeleteLog(input);
+
+            if (!removeSuccess)
+            {
+                Console.WriteLine($"No Log with such ID exist.\n");
+                break;
+            }
+
+            Console.WriteLine($"Success! Log with ID {input} removed\n");
+
+            break;
     }
 }
 
