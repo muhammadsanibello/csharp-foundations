@@ -5,10 +5,10 @@ namespace LoggingSystem
     public class LogEntry
     {
         public string Id { get; }
-        public string Message { get; }
-        public Level Level { get; }
-        public LogSource Source { get; }
-        public DateTime DateCreated { get; }
+        public string Message { get; private set; }
+        public Level Level { get; private set; }
+        public LogSource Source { get; private set; }
+        public DateTime DateCreated { get; private set; }
 
         public LogEntry(string id, string message, Level level, LogSource source, DateTime dateCreated)
         {
