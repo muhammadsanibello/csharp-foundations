@@ -22,11 +22,6 @@ namespace LoggingSystem
         // Method for viewing all logs
         public IEnumerable<LogEntry> logEntries()
         {
-            if (_logs.Count == 0)
-            {
-                return Enumerable.Empty<LogEntry>();
-            }
-
             return _logs.Values;
         }
 
