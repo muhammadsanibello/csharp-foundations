@@ -20,8 +20,13 @@ namespace LoggingSystem
         }
 
         // Method for viewing all logs
-        public IEnumerable<LogEntry> logEntries()
+        public IEnumerable<LogEntry> GetAllLogs()
         {
+            if ( _logs.Count == 0)
+            {
+                throw new ArgumentException("No log available");
+            }
+
             return _logs.Values;
         }
 
@@ -47,7 +52,7 @@ namespace LoggingSystem
         }
 
         // Method for clearing the _log data
-        public void ClearLog()
+        public void ClearLogs()
         {
             if (_logs.Count == 0)
             {
