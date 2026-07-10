@@ -22,5 +22,10 @@ namespace LoggingSystem
             Source = source;
             DateCreated = dateCreated;
         }
+
+        public override string ToString()
+        {
+            return $"Log ID: {Id}\nLog Message: {Message}\nError Level: {Level}\nLog Source: {Source}\nDate Created: {DateCreated}\n";
+        }
     }
 }
