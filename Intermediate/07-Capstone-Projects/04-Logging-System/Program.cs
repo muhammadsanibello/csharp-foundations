@@ -16,8 +16,7 @@ while (input != "0")
 
     switch (input)
     {
-        case "1":
-            // Create a log object
+        case "1":  // Create a log object
 
             Console.Write("Enter Log ID: ");
             string? id = Console.ReadLine();
@@ -35,8 +34,7 @@ while (input != "0")
 
             break;
 
-        case "2":
-            // View logs
+        case "2":  // View logs
 
             Console.WriteLine("===== Available logs =====\n");
 
@@ -52,6 +50,25 @@ while (input != "0")
             }
 
             break;
+
+        case "3":  // Search a log
+
+            Console.Write("Enter a log ID: ");
+            input = Console.ReadLine();
+
+            var targetLog = manager.SearchLog(input);
+
+            if (targetLog is null)
+            {
+                Console.WriteLine($"Log with Id {input} doesn't exist\n");
+                break;
+            }
+
+            Console.WriteLine("==== Log Details ====\n");
+            Console.WriteLine(targetLog);
+
+            break;
+
     }
 }
 
