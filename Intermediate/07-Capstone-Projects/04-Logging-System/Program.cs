@@ -38,13 +38,7 @@ while (input != "0")
 
             Console.WriteLine("===== Available logs =====\n");
 
-            if (!manager.logEntries().Any())
-            {
-                Console.WriteLine("No log available\n");
-                break;
-            }
-
-            foreach (var log in manager.logEntries())
+            foreach (var log in manager.GetAllLogs())
             {
                 Console.WriteLine(log);
             }
@@ -90,55 +84,14 @@ while (input != "0")
 
             Console.WriteLine("\n===== Statistics Dashboard =====\n");
 
-            if (!manager.logEntries().Any())
-            {
-                Console.WriteLine("No log available\n");
-                break;
-            }
+            var logs = manager.GetAllLogs();
+            int totalLogs = logs.Count();
+            int informations = logs.Count(x => x.Level == Level.Information);
+            int errors = logs.Count(x => x.Level == Level.Error);
+            int warnings = logs.Count(x => x.Level == Level.Warning);
+            int critical = logs.Count(x => x.Level == Level.Critical);
 
-            int totalLogs = 0;
-            int informations = 0;
-            int errors = 0;
-            int warnings = 0;
-            int critical = 0;
-
-            foreach (var log in manager.logEntries())
-            {
-                if (log.Level == Level.Information)
-                {
-                    informations++;
-                }
-                else if (log.Level == Level.Error)
-                {
-                    errors++;
-                }
-                else if(log.Level == Level.Warning)
-                {
-                    warnings++;
-                }
-                else
-                {
-                    critical++;
-                }
-
-                totalLogs++;
-
-            }
-
-            Console.WriteLine($"Total Logs: {totalLogs}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
+            Console.WriteLine($"Total Logs: {totalLogs}\nInformations: {informations}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
             break;
     }
-}
-
-var repository = new LogRepository();
-await repository.SaveLogsAsync(manager);
-
-var jsonString = await repository.LoadLogsAsync();
-var logObjects = JsonSerializer.Deserialize<List<LogEntry>>(jsonString) ?? throw new InvalidOperationException("Failed to deserialize json string");
-
-manager.ClearLog();
-
-foreach (var logObject in logObjects)
-{
-    manager.CreateLog(logObject);
 }
