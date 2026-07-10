@@ -13,7 +13,15 @@ namespace LoggingSystem
                 Console.WriteLine($"{i + 1}. {values[i]}");
             }
 
-            int choice = int.Parse(Console.ReadLine());
+            int choice;
+
+            while (!int.TryParse(Console.ReadLine(),
+                out choice) || 
+                choice < 1 || 
+                choice > values.Length)
+            {
+                Console.WriteLine("Invalid choice. Try again:");
+            }
 
             return values[choice - 1];
         }
