@@ -82,8 +82,50 @@ while (input != "0")
                 break;
             }
 
-            Console.WriteLine($"Success! Log with ID {input} removed\n");
+            Console.WriteLine($"Success! Log with ID {input} deleted\n");
 
+            break;
+
+        case "5":  // Statistics
+
+            Console.WriteLine("\n===== Statistics Dashboard =====\n");
+
+            if (!manager.logEntries().Any())
+            {
+                Console.WriteLine("No log available\n");
+                break;
+            }
+
+            int totalLogs = 0;
+            int informations = 0;
+            int errors = 0;
+            int warnings = 0;
+            int critical = 0;
+
+            foreach (var log in manager.logEntries())
+            {
+                if (log.Level == Level.Information)
+                {
+                    informations++;
+                }
+                else if (log.Level == Level.Error)
+                {
+                    errors++;
+                }
+                else if(log.Level == Level.Warning)
+                {
+                    warnings++;
+                }
+                else
+                {
+                    critical++;
+                }
+
+                totalLogs++;
+
+            }
+
+            Console.WriteLine($"Total Logs: {totalLogs}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
             break;
     }
 }
