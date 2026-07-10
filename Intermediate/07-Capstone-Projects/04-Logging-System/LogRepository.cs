@@ -8,7 +8,7 @@ namespace LoggingSystem
         // Method of saving logs to a file
         public async Task SaveLogsAsync(LogManager manager)
         {
-            var logObjects = manager.logEntries();
+            var logObjects = manager.GetAllLogs();
             string JsonString = JsonSerializer.Serialize(logObjects);
 
             await File.WriteAllTextAsync(FileSource.GetFilePath(), JsonString);
