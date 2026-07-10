@@ -1,10 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace _04_Logging_System
+namespace LoggingSystem
 {
-    internal class MenuOptionValidation
+    public static class MenuOptionValidation
     {
+        public static void ValidateOption(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input) || !input.All(Char.IsDigit))
+            {
+                throw new ArgumentException("Invalid option! Try-again");
+            }
+        }
     }
 }
