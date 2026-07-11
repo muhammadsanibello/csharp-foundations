@@ -8,6 +8,7 @@ namespace LoggingSystem
         // Dictionary for storing all logs and allow fast lookup by ID
         private Dictionary<string, LogEntry> _logs = new();
         private Stack<LogEntry> _deletedLogs = new();
+        private Queue<LogEntry> _pendingLogs = new();
 
         // Method for creating new log
         public void CreateLog(LogEntry logEntry)
@@ -18,6 +19,7 @@ namespace LoggingSystem
             }
 
             _logs.Add(logEntry.Id, logEntry);
+            _pendingLogs.Enqueue(logEntry);
         }
 
         // Method for viewing all logs
@@ -65,14 +67,25 @@ namespace LoggingSystem
         // Method for undo deleted logs
         public bool UndoLog()
         {
-            if (_deletedLogs.TryPop(out var result))
+            if (_deletedLogs.TryPop(out var restoredLog))
             {
-                _logs.Add(result.Id, result);
+                _logs.Add(restoredLog.Id, restoredLog);
 
                 return true;
             }
 
             return false;
+        }
+
+        // Method for processing logs
+        public LogEntry? ProcessNextLog()
+        {
+            if (_pendingLogs.TryDequeue(out var processedLog))
+            {
+                return processedLog;
+            }
+
+            return null;
         }
 
         // Method for clearing the _log data
