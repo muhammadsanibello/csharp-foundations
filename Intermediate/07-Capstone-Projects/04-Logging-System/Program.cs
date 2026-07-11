@@ -5,6 +5,12 @@ var menu = Menu.GetUserMenu();
 string? input = string.Empty;
 var manager = new LogManager();
 
+// Subscribe to the critical event
+manager.CriticalLogCreated += (sender, e) =>
+{
+    Console.WriteLine($"\nAlert!\nCritical Log with id {e.LogEntry.Id} detected.\nAdministrators has been notified\n");
+};
+
 while (input != "0")
 {
     Console.WriteLine(menu);
