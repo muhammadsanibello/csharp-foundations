@@ -85,6 +85,7 @@ while (input != "0")
             Console.WriteLine("\n===== Statistics Dashboard =====\n");
 
             var logs = manager.GetAllLogs();
+
             int totalLogs = logs.Count();
             int informations = logs.Count(x => x.Level == Level.Information);
             int errors = logs.Count(x => x.Level == Level.Error);
@@ -92,6 +93,20 @@ while (input != "0")
             int critical = logs.Count(x => x.Level == Level.Critical);
 
             Console.WriteLine($"Total Logs: {totalLogs}\nInformations: {informations}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
+            break;
+
+        case "6":  // Undo Log
+
+            bool undoSuccess = manager.UndoLog();
+
+            if (!undoSuccess)
+            {
+                Console.WriteLine("No deleted log available to undo");
+                break;
+            }
+
+            Console.WriteLine("Undo succesfully");
+
             break;
     }
 }
