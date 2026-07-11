@@ -101,11 +101,25 @@ while (input != "0")
 
             if (!undoSuccess)
             {
-                Console.WriteLine("No deleted log available to undo");
+                Console.WriteLine("No deleted log available.");
                 break;
             }
 
             Console.WriteLine("Undo succesfully");
+
+            break;
+
+        case "7":  // Process log
+
+            var processedLog = manager.ProcessNextLog();
+
+            if (processedLog is null)
+            {
+                Console.WriteLine("No pending log available.");
+                break;
+            }
+
+            Console.WriteLine($"Processing log with id {processedLog.Id}...");
 
             break;
     }
