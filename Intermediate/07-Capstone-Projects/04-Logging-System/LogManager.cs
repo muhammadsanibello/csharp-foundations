@@ -20,6 +20,11 @@ namespace LoggingSystem
 
             _logs.Add(logEntry.Id, logEntry);
             _pendingLogs.Enqueue(logEntry);
+
+            if (logEntry.Level == Level.Critical)
+            {
+                OnCriticalLogCreated(new CriticalEventArgs(logEntry));
+            }
         }
 
         // Method for viewing all logs
@@ -98,5 +103,16 @@ namespace LoggingSystem
 
             _logs.Clear();
         }
+
+        // Event for critical logs
+        public event EventHandler<CriticalEventArgs>? CriticalLogCreated;   /// Nullable to indicate no subscribers initially
+
+        // Method that raised an event
+        protected virtual void OnCriticalLogCreated(CriticalEventArgs e)
+        {
+            // If subscriber exist, raise the event
+            CriticalLogCreated?.Invoke(this, e);
+        }
+
     }
 }
