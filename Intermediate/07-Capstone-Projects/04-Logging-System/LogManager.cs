@@ -7,6 +7,7 @@ namespace LoggingSystem
     {
         // Dictionary for storing all logs and allow fast lookup by ID
         private Dictionary<string, LogEntry> _logs = new();
+        private Stack<LogEntry> _deletedLogs = new();
 
         // Method for creating new log
         public void CreateLog(LogEntry logEntry)
@@ -46,9 +47,32 @@ namespace LoggingSystem
         // Method for deleting a log
         public bool DeleteLog(string id)
         {
-            IdValidation.ValidateId(id);
+            var log = SearchLog(id);  // return log object if exist, otherwise null
 
-            return _logs.Remove(id);
+            if (log is null)
+            {
+                return false;
+            }
+
+            _logs.Remove(log.Id);
+
+            // add deleted log to stack
+            _deletedLogs.Push(log);
+
+            return true;
+        }
+
+        // Method for undo deleted logs
+        public bool UndoLog()
+        {
+            if (_deletedLogs.TryPop(out var result))
+            {
+                _logs.Add(result.Id, result);
+
+                return true;
+            }
+
+            return false;
         }
 
         // Method for clearing the _log data
