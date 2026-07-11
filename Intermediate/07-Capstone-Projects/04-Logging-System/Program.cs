@@ -3,6 +3,7 @@ using System.Text.Json;
 
 var menu = Menu.GetUserMenu();
 string? input = string.Empty;
+var repository = new LogRepository();
 var manager = new LogManager();
 
 // Subscribe to the critical event
@@ -11,122 +12,173 @@ manager.CriticalLogCreated += (sender, e) =>
     Console.WriteLine($"\nAlert!\nCritical Log with id {e.LogEntry.Id} detected.\nAdministrators has been notified\n");
 };
 
-while (input != "0")
+
+while (true)
 {
     Console.WriteLine(menu);
     Console.WriteLine(Environment.NewLine);
-
     Console.Write("Choose from the above options to continue: ");
-    input= Console.ReadLine();
-    MenuOptionValidation.ValidateOption(input);
 
-    switch (input)
+    try
     {
-        case "1":  // Create a log object
+        input = Console.ReadLine();
+        MenuOptionValidation.ValidateOption(input);
 
-            Console.Write("Enter Log ID: ");
-            string? id = Console.ReadLine();
-
-            Console.Write("Enter Log message: ");
-            string? message = Console.ReadLine();
-
-            Console.WriteLine("Select an error level:");
-            Level level = EnumInputHelper.GetEnumChoice<Level>();
-
-            Console.WriteLine("Select a log source:");
-            LogSource logSource = EnumInputHelper.GetEnumChoice<LogSource>();
-
-            manager.CreateLog(new LogEntry(id, message, level, logSource, DateTime.Now));
-
+        if (input == "0")
+        {
             break;
+        }
 
-        case "2":  // View logs
+        switch (input)
+        {
+            case "1":  // Create a log object
 
-            Console.WriteLine("===== Available logs =====\n");
+                Console.Write("Enter Log ID: ");
+                string? id = Console.ReadLine();
 
-            foreach (var log in manager.GetAllLogs())
-            {
-                Console.WriteLine(log);
-            }
+                Console.Write("Enter Log message: ");
+                string? message = Console.ReadLine();
 
-            break;
+                Console.WriteLine("Select an error level:");
+                Level level = EnumInputHelper.GetEnumChoice<Level>();
 
-        case "3":  // Search a log
+                Console.WriteLine("Select a log source:");
+                LogSource logSource = EnumInputHelper.GetEnumChoice<LogSource>();
 
-            Console.Write("Enter a log ID: ");
-            input = Console.ReadLine();
+                manager.CreateLog(new LogEntry(id, message, level, logSource, DateTime.Now));
 
-            var targetLog = manager.SearchLog(input);
-
-            if (targetLog is null)
-            {
-                Console.WriteLine($"Log with Id {input} doesn't exist\n");
                 break;
-            }
 
-            Console.WriteLine("==== Log Details ====\n");
-            Console.WriteLine(targetLog);
+            case "2":  // View logs
 
-            break;
+                Console.WriteLine("===== Available logs =====\n");
 
-        case "4":   // Delete a log
+                foreach (var log in manager.GetAllLogs())
+                {
+                    Console.WriteLine(log);
+                }
 
-            Console.Write("Enter a log ID: ");
-            input = Console.ReadLine();
-
-            var removeSuccess = manager.DeleteLog(input);
-
-            if (!removeSuccess)
-            {
-                Console.WriteLine($"No Log with such ID exist.\n");
                 break;
-            }
 
-            Console.WriteLine($"Success! Log with ID {input} deleted\n");
+            case "3":  // Search a log
 
-            break;
+                Console.Write("Enter a log ID: ");
+                input = Console.ReadLine();
 
-        case "5":  // Statistics
+                var targetLog = manager.SearchLog(input);
 
-            Console.WriteLine("\n===== Statistics Dashboard =====\n");
+                if (targetLog is null)
+                {
+                    Console.WriteLine($"Log with Id {input} doesn't exist\n");
+                    break;
+                }
 
-            var logs = manager.GetAllLogs();
+                Console.WriteLine("==== Log Details ====\n");
+                Console.WriteLine(targetLog);
 
-            int totalLogs = logs.Count();
-            int informations = logs.Count(x => x.Level == Level.Information);
-            int errors = logs.Count(x => x.Level == Level.Error);
-            int warnings = logs.Count(x => x.Level == Level.Warning);
-            int critical = logs.Count(x => x.Level == Level.Critical);
-
-            Console.WriteLine($"Total Logs: {totalLogs}\nInformations: {informations}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
-            break;
-
-        case "6":  // Undo Log
-
-            bool undoSuccess = manager.UndoLog();
-
-            if (!undoSuccess)
-            {
-                Console.WriteLine("No deleted log available.");
                 break;
-            }
 
-            Console.WriteLine("Undo succesfully");
+            case "4":   // Delete a log
 
-            break;
+                Console.Write("Enter a log ID: ");
+                input = Console.ReadLine();
 
-        case "7":  // Process log
+                var removeSuccess = manager.DeleteLog(input);
 
-            var processedLog = manager.ProcessNextLog();
+                if (!removeSuccess)
+                {
+                    Console.WriteLine($"No Log with such ID exist.\n");
+                    break;
+                }
 
-            if (processedLog is null)
-            {
-                Console.WriteLine("No pending log available.");
+                Console.WriteLine($"Success! Log with ID {input} deleted\n");
+
                 break;
-            }
 
-            Console.WriteLine($"Processing log with id {processedLog.Id}...");
+            case "5":  // Statistics
 
-            break;
+                Console.WriteLine("\n===== Statistics Dashboard =====\n");
+
+                var logs = manager.GetAllLogs();
+
+                int totalLogs = logs.Count();
+                int informations = logs.Count(x => x.Level == Level.Information);
+                int errors = logs.Count(x => x.Level == Level.Error);
+                int warnings = logs.Count(x => x.Level == Level.Warning);
+                int critical = logs.Count(x => x.Level == Level.Critical);
+
+                Console.WriteLine($"Total Logs: {totalLogs}\nInformations: {informations}\nErrors: {errors}\nWarnings: {warnings}\nCritical: {critical}\n");
+                break;
+
+            case "6":  // Undo Log
+
+                bool undoSuccess = manager.UndoLog();
+
+                if (!undoSuccess)
+                {
+                    Console.WriteLine("No deleted log available.");
+                    break;
+                }
+
+                Console.WriteLine("Undo succesfully");
+
+                break;
+
+            case "7":  // Process log
+
+                var processedLog = manager.ProcessNextLog();
+
+                if (processedLog is null)
+                {
+                    Console.WriteLine("No pending log available.");
+                    break;
+                }
+
+                Console.WriteLine($"Processing log with id {processedLog.Id}...");
+
+                break;
+
+            case "8":  // Save logs to a file
+
+                await repository.SaveLogsAsync(manager);
+                Console.WriteLine("Logs saved successfully");
+                break;
+
+            case "9":  // Load logs from the file
+
+                var jsonString = await repository.LoadLogsAsync();
+
+                var logEntries = JsonSerializer.Deserialize<List<LogEntry>>(jsonString) ?? throw new InvalidOperationException("Failed to deserialized logs");
+
+                manager.ClearLogs();
+
+                foreach (var log in logEntries)
+                {
+                    manager.CreateLog(log);
+                }
+                Console.WriteLine("Logs loaded successfully");
+
+                break;
+
+            default:
+                throw new InvalidOperationException("Option doesn`t exist");
+        }
     }
+    catch (ArgumentException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    catch (InvalidOperationException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    catch (IOException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    catch (FormatException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    
 }
