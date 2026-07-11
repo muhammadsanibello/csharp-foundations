@@ -4,14 +4,20 @@ using System.Text.Json;
 namespace LoggingSystem
 {
     public class LogRepository
-    {
+    {   
         // Method of saving logs to a file
         public async Task SaveLogsAsync(LogManager manager)
         {
-            var logObjects = manager.GetAllLogs();
-            string JsonString = JsonSerializer.Serialize(logObjects);
+            // customize the Serialize() method
+            var options = new JsonSerializerOptions()
+            {
+                WriteIndented = true,
+            };
 
-            await File.WriteAllTextAsync(FileSource.GetFilePath(), JsonString);
+            var logObjects = manager.GetAllLogs();
+            string jsonString = JsonSerializer.Serialize(logObjects, options);
+
+            await File.WriteAllTextAsync(FileSource.GetFilePath(), jsonString);
         }
 
         // Method of loading logs from the file
