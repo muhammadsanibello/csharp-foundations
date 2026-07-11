@@ -19,11 +19,6 @@ namespace LoggingSystem
             string fileName = "logs.json";
             string filePath = Path.Combine(directoryPath, fileName);
 
-            if (!File.Exists(filePath))
-            {
-                File.Create(filePath);
-            }
-
             return filePath;
         }
      
